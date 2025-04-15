@@ -1,10 +1,10 @@
-import { useNavigate } from "react-router-dom";
+﻿import { useNavigate } from "react-router-dom";
+import CardPostagens from "../cardpostagens/CardPostagens";
 import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Postagem from "../../../models/Postagem";
 import { buscar } from "../../../services/Service";
 import { DNA } from "react-loader-spinner";
-import CardPostagens from "../cardpostagens/CardPostagens";
 
 function ListaPostagens() {
 
@@ -53,13 +53,16 @@ function ListaPostagens() {
                     wrapperClass="dna-wrapper mx-auto"
                 />
             )}
-            <div className='container mx-auto my-4 
-                grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
-            >
-                {postagens.map((postagem) => (
-                    <CardPostagens key={postagem.id} postagem={postagem} />
-                ))}
-
+            <div className="flex justify-center w-full my-4">
+                <div className="container flex flex-col mx-2">
+                    <div className='container mx-auto my-4 
+                        grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
+                    >
+                        {postagens.map((postagem) => (
+                            <CardPostagens key={postagem.id} postagem={postagem} />
+                        ))}
+                    </div>
+                </div>
             </div>
         </>
     );

@@ -1,4 +1,4 @@
-﻿import { useState, useContext, useEffect, ChangeEvent } from "react";
+﻿﻿import { useState, useContext, useEffect, ChangeEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Postagem from "../../../models/Postagem";
@@ -178,7 +178,9 @@ function FormPostagem() {
                         <option value="" selected disabled>Selecione um Tema</option>
 
                         {temas.map((tema) => (
-                            <option value={tema.id} >{tema.descricao}</option>
+                            <>
+                                <option value={tema.id} >{tema.descricao}</option>
+                            </>
                         ))}
 
                     </select>
