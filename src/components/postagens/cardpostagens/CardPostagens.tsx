@@ -13,7 +13,7 @@ function CardPostagem({ postagem }: CardPostagensProps) {
             <div>
                 <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
                     <img
-                        src={postagem.usuario?.foto}
+                        src={postagem.usuario?.foto || 'https://teams.microsoft.com/l/message/19:meeting_MjkyMmE0ODUtNzBhNi00NjM2LWJlMTItNTE2NjIxNDhjNGE5@thread.v2/1744807794465?context=%7B%22contextType%22%3A%22chat%22%7D'}
                         className='h-12 rounded-full'
                         alt={postagem.usuario?.nome} />
                     <h3 className='text-lg font-bold text-center uppercase'>
